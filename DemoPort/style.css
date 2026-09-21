@@ -1,0 +1,153 @@
+:root {
+  --bg: #0f1115;
+  --bg-alt: #161923;
+  --text: #eaecef;
+  --text-dim: #9aa1ac;
+  --accent: #4fd1c5;
+  --border: #2a2e3a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Malgun Gothic", "Segoe UI", -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.header {
+  padding: 96px 0 72px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+}
+
+.name {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.title {
+  margin-top: 8px;
+  font-size: 18px;
+  color: var(--text-dim);
+}
+
+/* Sections */
+.section {
+  padding: 64px 0;
+}
+
+.section + .section {
+  border-top: 1px solid var(--border);
+}
+
+.section-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--accent);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* About */
+.about-text {
+  font-size: 17px;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+.badge-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+}
+
+/* Contact */
+.email-link {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  padding: 14px 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-alt);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.email-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Footer */
+.footer {
+  padding: 32px 0 48px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .header {
+    padding: 72px 0 56px;
+  }
+
+  .name {
+    font-size: 32px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .email-link {
+    font-size: 17px;
+    padding: 12px 18px;
+    word-break: break-all;
+  }
+}
